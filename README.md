@@ -62,10 +62,9 @@
 <p><a href="https://open.spotify.com/track/3UStHHOyFXetR5621bKJBz?si=4pcKATGCS3my1TBltrvYPg" target="_blank" rel="noopener noreferrer">Ouça nossa música especial aqui</a></p>
 
 <div id="fotos">
-  <img src="https://drive.google.com/uc?export=view&id=1ZFMbvlCAP3JJIkSywyRsT4bwKd2HArrW" alt="Foto 1" />
-  <img src="https://drive.google.com/uc?export=view&id=1lTbroCQJzI1b9BWIM-LfoSsN3dVXF6gb" alt="Foto 2" />
-  <img src="https://drive.google.com/uc?export=view&id=1LCRGTjObrG-emKdnvSUJI0HW4BZ1vgAK" alt="Foto 3" />
-</div>
+![IMG_1498_VSCO.jpeg](./IMG_1498_VSCO.jpeg)
+![IMG_1995.jpeg](./IMG_1995.jpeg)
+![IMG_9321.jpeg](./IMG_9321.jpeg)
 
 <script>
   const inicio = new Date('2024-05-10T00:00:00'); // Data que começaram
