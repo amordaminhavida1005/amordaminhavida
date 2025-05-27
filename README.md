@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
@@ -40,8 +41,10 @@
     margin-top: 25px;
     display: flex;
     gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
   }
   #fotos img {
     width: 120px;
@@ -49,6 +52,7 @@
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 0 8px #d98bbd;
+    flex: 0 0 auto;
   }
 </style>
 </head>
