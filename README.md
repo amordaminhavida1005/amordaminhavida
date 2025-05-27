@@ -55,7 +55,7 @@
 <body>
 
 <h1>Meu amor,</h1>
-<p>Eu te amo tanto, quero viver pra sempre com você. Você é o meu porto seguro, minha paz, minha vida, meu garoto preferido o mundo inteirinho. Quero poder construir uma vida ao seu lado, quero casar com você e construir uma família linda junto contigo. Eu te amo muito, meu amor! ❤️</p>
+<p>Eu te amo tanto, quero viver pra sempre com você. Você é o meu porto seguro, minha paz, minha vida, meu garoto preferido do mundo inteirinho. Quero poder construir uma vida ao seu lado, quero casar com você e construir uma família linda junto contigo. Eu te amo muito, meu amor! ❤️</p>
 
 <div id="contador">Estamos juntos há: 0 dias, 0h 0m 0s</div>
 
