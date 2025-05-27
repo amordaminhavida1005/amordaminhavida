@@ -1,4 +1,4 @@
-# amordaminhavida<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
@@ -62,9 +62,10 @@
 <p><a href="https://open.spotify.com/track/3UStHHOyFXetR5621bKJBz?si=4pcKATGCS3my1TBltrvYPg" target="_blank" rel="noopener noreferrer">Ouça nossa música especial aqui</a></p>
 
 <div id="fotos">
-IMG_1498_VSCO.jpeg
-IMG_1995.jpeg
-IMG_9321.jpeg
+  <img src="IMG_1498_VSCO.jpeg" alt="Foto 1" />
+  <img src="IMG_1995.jpeg" alt="Foto 2" />
+  <img src="IMG_9321.jpeg" alt="Foto 3" />
+</div>
 
 <script>
   const inicio = new Date('2024-05-10T00:00:00'); // Data que começaram
