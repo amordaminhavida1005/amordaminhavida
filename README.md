@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
@@ -37,22 +37,48 @@
   a:hover {
     text-decoration: underline;
   }
-  #fotos {
-    margin-top: 25px;
+  #story-container {
+    margin: 30px auto 0 auto;
+    width: 240px;
+    height: 430px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #d98bbd;
     display: flex;
-    gap: 10px;
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    scroll-behavior: smooth;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /* proporção vertical estilo story */
   }
-  #fotos img {
-    width: 120px;
-    height: 120px;
+  #story-img {
+    width: 220px;
+    height: 390px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 0 8px #d98bbd;
-    flex: 0 0 auto;
+    transition: opacity 0.7s;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    background: #eee;
+  }
+  /* Barra de progresso opcional no topo do story */
+  #progress-bar {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    width: 210px;
+    height: 5px;
+    background: #e2c4d9;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  #progress {
+    height: 100%;
+    background: linear-gradient(90deg, #a83279, #f7797d);
+    width: 0;
+    transition: width 0.1s;
   }
 </style>
 </head>
@@ -65,18 +91,17 @@
 
 <p><a href="https://open.spotify.com/track/3UStHHOyFXetR5621bKJBz?si=4pcKATGCS3my1TBltrvYPg" target="_blank" rel="noopener noreferrer">Ouça nossa música especial aqui</a></p>
 
-<div id="fotos">
-  <img src="IMG_1498_VSCO.jpeg" alt="Foto 1" />
-  <img src="IMG_1995.jpeg" alt="Foto 2" />
-  <img src="IMG_9321.jpeg" alt="Foto 3" />
+<div id="story-container">
+  <div id="progress-bar"><div id="progress"></div></div>
+  <img id="story-img" src="IMG_1498_VSCO.jpeg" alt="Foto do story" />
 </div>
 
 <script>
-  const inicio = new Date('2024-05-10T00:00:00'); // Data que começaram
-
+  // Contador de tempo juntos
+  const inicio = new Date('2024-05-10T00:00:00');
   function atualizarContador() {
     const agora = new Date();
-    let diff = Math.floor((agora - inicio) / 1000); // diferença em segundos
+    let diff = Math.floor((agora - inicio) / 1000);
 
     const dias = Math.floor(diff / (3600 * 24));
     diff -= dias * 3600 * 24;
@@ -87,11 +112,59 @@
     const minutos = Math.floor(diff / 60);
     const segundos = diff - minutos * 60;
 
-    document.getElementById('contador').textContent = `Estamos juntos há: ${dias} dias, ${horas}h ${minutos}m ${segundos}s`;
+    document.getElementById('contador').textContent = 
+      `Estamos juntos há: ${dias} dias, ${horas}h ${minutos}m ${segundos}s`;
   }
-
   setInterval(atualizarContador, 1000);
   atualizarContador();
+
+  // Story automático
+  const imagens = [
+    'IMG_1498_VSCO.jpeg',
+    'IMG_1995.jpeg',
+    'IMG_9321.jpeg'
+  ];
+  let storyIndex = 0;
+  const storyImg = document.getElementById('story-img');
+  const progress = document.getElementById('progress');
+  const tempoStory = 3000; // 3 segundos por imagem
+
+  function mostrarStory(i) {
+    storyImg.style.opacity = 0;
+    setTimeout(() => {
+      storyImg.src = imagens[i];
+      storyImg.style.opacity = 1;
+      progress.style.width = '0';
+    }, 700); // Mesmo tempo da transição CSS
+  }
+
+  function proximoStory() {
+    storyIndex = (storyIndex + 1) % imagens.length;
+    mostrarStory(storyIndex);
+  }
+
+  // Barra de progresso
+  let intervalo, progresso;
+  function startStoryTimer() {
+    let start = Date.now();
+    progresso = setInterval(() => {
+      let elapsed = Date.now() - start;
+      let percent = Math.min((elapsed / tempoStory) * 100, 100);
+      progress.style.width = percent + '%';
+      if (percent >= 100) {
+        clearInterval(progresso);
+      }
+    }, 30);
+    intervalo = setTimeout(() => {
+      proximoStory();
+      startStoryTimer();
+    }, tempoStory);
+  }
+
+  mostrarStory(storyIndex);
+  startStoryTimer();
+
+  // Reinicia o timer ao trocar a imagem manualmente (se desejar implementar toque/click futuramente)
 </script>
 
 </body>
