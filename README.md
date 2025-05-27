@@ -61,7 +61,7 @@
 
 <p><a href="https://open.spotify.com/track/3UStHHOyFXetR5621bKJBz?si=4pcKATGCS3my1TBltrvYPg" target="_blank" rel="noopener noreferrer">Ouça nossa música especial aqui</a></p>
 
-<div id="fotos">
+<div id="fotos">![Descrição da imagem](IMG_1498_VSCO.jpeg)
 ![IMG_1498_VSCO.jpeg](./IMG_1498_VSCO.jpeg)
 ![IMG_1995.jpeg](./IMG_1995.jpeg)
 ![IMG_9321.jpeg](./IMG_9321.jpeg)
