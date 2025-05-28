@@ -89,7 +89,7 @@
 
 <div id="contador">Estamos juntos há: 0 dias, 0h 0m 0s</div>
 
-<p><a href="https://open.spotify.com/track/3UStHHOyFXetR5621bKJBz?si=4pcKATGCS3my1TBltrvYPg" target="_blank" rel="noopener noreferrer">Ouça nossa música especial aqui</a></p>
+<p><a href="https://open.spotify.com/track/2o2xhyri4aJUtgMGkf5P0J?si=O4Z0X51mTfWOVLoNjDIXSw" target="_blank" rel="noopener noreferrer">Ouça nossa música especial aqui</a></p>
 
 <div id="story-container">
   <div id="progress-bar"><div id="progress"></div></div>
